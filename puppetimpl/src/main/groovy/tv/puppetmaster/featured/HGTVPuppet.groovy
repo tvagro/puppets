@@ -37,7 +37,7 @@ public class HGTVPuppet implements InstallablePuppet {
                 "HGTV.com",
                 "Play videos from the HGTV network.",
                 "/shows/full-episodes",
-                "http://www.huliq.com/files/news_article/images/hgtv_1.jpg",
+                "https://s-media-cache-ak0.pinimg.com/avatars/hgtv_1422044086_280.jpg",
                 "http://www.hgtv.com/content/dam/images/hgtv/editorial/homepage/hgtv-portal-feature.jpg",
                 true
         )
@@ -220,8 +220,8 @@ public class HGTVPuppet implements InstallablePuppet {
                             mParent,
                             mBaseUrl,
                             url.startsWith("/") ? mBaseUrl + url : url,
-                            item.get("title").toString(),
-                            item.get("description").toString(),
+                            Jsoup.parse(item.getString("title")).text(),
+                            Jsoup.parse(item.getString("description")).text(),
                             imageUrl.startsWith("/") ? mBaseUrl + imageUrl : imageUrl,
                             Long.parseLong(item.get("length").toString()) * 1000,
                             mUrl
@@ -427,18 +427,22 @@ public class HGTVPuppet implements InstallablePuppet {
 
                     Document document = Jsoup.connect(mUrl).ignoreContentType(true).get()
 
-                    Elements videos = document.select("video")
-                    for (Element video in videos) {
-                        SourceDescription source = new SourceDescription()
-                        source.url = video.attr("src")
-                        mSources.add(source)
+                    def ArrayList<String> sources = []
+
+                    ["video", "ref"].each {
+                        Elements videos = document.select(it)
+                        for (Element video in videos) {
+                            String url = video.attr("src")
+                            if (url.endsWith(".mp4") || url.endsWith(".m3u8")) {
+                                sources << url
+                            }
+                        }
                     }
 
-                    videos = document.select("ref")
-                    for (Element video in videos) {
+                    sources.unique().each {
                         SourceDescription source = new SourceDescription()
-                        source.url = video.attr("src")
-                        mSources.add(source)
+                        source.url = it
+                        mSources << source
                     }
                 }
                 return currentIndex < mSources.size()
