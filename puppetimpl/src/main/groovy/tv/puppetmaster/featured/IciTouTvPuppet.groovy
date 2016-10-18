@@ -163,7 +163,7 @@ public class IciTouTvPuppet implements InstallablePuppet {
                     "Recherche",
                     "Recherche ICI Tou.Tv",
                     SEARCH_URL,
-                    "https://pbs.twimg.com/profile_images/448556282404818944/rM6tjmAB_400x400.png",
+                    "https://pbs.twimg.com/profile_images/771736597670797312/7txcDom5.jpg",
                     "http://ici.tou.tv/Content/images/generic.jpg",
                     false
             )
@@ -218,7 +218,7 @@ public class IciTouTvPuppet implements InstallablePuppet {
                                 item.getString("Title"),
                                 null,
                                 "/v1/toutvapiservice.svc/json/GetPageRepertoire",
-                                "https://pbs.twimg.com/profile_images/448556282404818944/rM6tjmAB_400x400.png",
+                                "https://pbs.twimg.com/profile_images/771736597670797312/7txcDom5.jpg",
                                 "http://ici.tou.tv/Content/images/generic.jpg",
                                 false
                         ))
