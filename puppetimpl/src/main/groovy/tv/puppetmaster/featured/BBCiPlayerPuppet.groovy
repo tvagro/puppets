@@ -21,7 +21,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/bbcone/a-z",
                     imageUrl:           "http://www.throup.org.uk/images/doctor_who/bbc_one.png",
                     backgroundImageUrl: "http://www.throup.org.uk/images/doctor_who/bbc_one.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_one_hd.m3u8",
             ],
             [
                     name:               "BBC Two",
@@ -30,7 +31,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/bbctwo/a-z",
                     imageUrl:           "https://s-media-cache-ak0.pinimg.com/736x/5f/3b/53/5f3b5311a3db51d778d8fc8cfad77d97.jpg",
                     backgroundImageUrl: "https://i.ytimg.com/vi/Vrq9shq0k4o/maxresdefault.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_two_hd.m3u8",
             ],
             [
                     name:               "BBC Three",
@@ -39,6 +41,7 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/bbcthree/a-z",
                     imageUrl:           "https://d13yacurqjgara.cloudfront.net/users/484796/screenshots/2438904/bbc3-logofix_1x.jpg",
                     backgroundImageUrl: "http://www.theyorker.co.uk/wp-content/uploads/2016/02/bbc-3-three-logo.png",
+                    preferredRegion:    "uk",
             ],
             [
                     name:               "BBC Four",
@@ -47,7 +50,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/bbcfour/a-z",
                     imageUrl:           "http://theeurotvplace.com/wp-content/uploads/2015/08/BBC-Four-logo.jpg",
                     backgroundImageUrl: "http://www.redbeecreative.com/storage/imagecache/poster_medium/work/bbc-four.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_four_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_four_hd.m3u8",
             ],
             [
                     name:               "CBBC",
@@ -56,7 +60,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/cbbc/a-z",
                     imageUrl:           "http://www.astra2sat.com/wp-content/uploads/2016/03/CBBC-Logo.jpg",
                     backgroundImageUrl: "http://www.redbeecreative.com/storage/imagecache/poster_medium/work_block_carousel/cbbc-logo1-15040.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbbc_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/cbbc_hd.m3u8",
             ],
             [
                     name:               "CBeebies",
@@ -65,7 +70,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/cbeebies/a-z",
                     imageUrl:           "http://etcandroid.com/wp-content/uploads/2015/07/cbeebies-videos-and-games.png",
                     backgroundImageUrl: "http://www.mauloni.com/wp-content/uploads/2014/08/CBeebies.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/cbeebies_hd.m3u8",
             ],
             [
                     name:               "BBC News Channel",
@@ -74,7 +80,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/bbcnews/a-z",
                     imageUrl:           "http://www.providencetalks.org/wp-content/uploads/2014/03/bbc2-300x300.png",
                     backgroundImageUrl: "http://vignette2.wikia.nocookie.net/logopedia/images/0/00/BBC_News_Generic.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_news24.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_news24.m3u8",
             ],
             [
                     name:               "أخبار بي بي سي",
@@ -99,7 +106,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/bbcparliament/a-z",
                     imageUrl:           "https://static.filmon.com/assets/channels/1666/extra_big_logo.png",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/4/49/BBC_Parliament_Logo.svg/1280px-BBC_Parliament_Logo.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_parliament.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_parliament.m3u8",
             ],
             [
                     name:               "Alba",
@@ -108,7 +116,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/bbcalba/a-z",
                     imageUrl:           "https://freebets.uk/img/channels/300x300/BBC-ALBA.png",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/BBC_Alba.svg/1280px-BBC_Alba.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_alba.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_alba.m3u8",
             ],
             [
                     name:               "S4C",
@@ -117,7 +126,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     url:                "http://www.bbc.co.uk/tv/s4c/a-z",
                     imageUrl:           "http://deltafonts.com/wp-content/uploads/s4c-logo.png",
                     backgroundImageUrl: "http://static.bbci.co.uk/tviplayer/1.121.0/img/emp/s4c_640.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/s4cpbs.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/s4cpbs.m3u8",
             ],
             [
                     name:               "BBC One London",
@@ -125,7 +135,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "The latest stories making waves from the capital.",
                     imageUrl:           "http://www.triconestudios.com/wp-content/uploads/2012/04/bbc_london_640_360.jpg",
                     backgroundImageUrl: "http://vignette3.wikia.nocookie.net/logopedia/images/c/c2/BBC_One_London_Marathon_sting.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_one_london.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_one_london.m3u8",
             ],
             [
                     name:               "BBC One Scotland",
@@ -133,7 +144,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Scottish variation of the UK-wide BBC One.",
                     imageUrl:           "https://www.scottishgolf.org/wp-content/uploads/BBCScotland-logo.jpg",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/BBC_Scotland_corporate_logo.svg/1280px-BBC_Scotland_corporate_logo.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_one_scotland_hd.m3u8",
             ],
             [
                     name:               "BBC One Northern Ireland",
@@ -141,7 +153,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Northern Irish variation of the UK-wide BBC One.",
                     imageUrl:           "https://pbs.twimg.com/profile_images/550386928780980225/6yQROLCn_400x400.png",
                     backgroundImageUrl: "http://theident.gallery/misc/misc/bbc1-e16-1.jpg",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_one_northern_ireland_hd.m3u8",
             ],
             [
                     name:               "BBC One Wales",
@@ -149,7 +162,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Welsh variation of the UK-wide BBC One.",
                     imageUrl:           "https://theident.gallery/bbc1/BBC1W-2012-ID-SPECIAL-STDAVIDSDAY-1-4.jpg",
                     backgroundImageUrl: "http://vignette1.wikia.nocookie.net/logopedia/images/c/c6/BBC_One_Wales_Olympics_sting_2016_(Sports).png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/llnw/bbc_one_wales_hd.m3u8",
             ],
             [
                     name:               "BBC Two Scotland",
@@ -157,7 +171,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Specialised programming aimed at Scottish viewers.",
                     imageUrl:           "http://ichef.bbci.co.uk/images/ic/406x228/p027brvs.jpg",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/BBC_Scotland_corporate_logo.svg/1280px-BBC_Scotland_corporate_logo.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_two_scotland.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_two_scotland.m3u8",
             ],
             [
                     name:               "BBC Two Northern Ireland",
@@ -165,7 +180,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Specialised programming aimed at Northern Irish viewers.",
                     imageUrl:           "http://ichef.bbci.co.uk/images/ic/406x228/p027brjz.jpg",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/BBC_Two_Northern_Ireland.svg/1280px-BBC_Two_Northern_Ireland.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_two_northern_ireland_digital.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_two_northern_ireland_digital.m3u8",
             ],
             [
                     name:               "BBC Two Wales",
@@ -173,7 +189,8 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Specialised programming aimed at Welsh viewers.",
                     imageUrl:           "http://ichef.bbci.co.uk/images/ic/406x228/p025zq55.jpg",
                     backgroundImageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/BBC_Two_Wales_logo.svg/1280px-BBC_Two_Wales_logo.svg.png",
-                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_two_wales_digital.m3u8",
+                    preferredRegion:    "uk",
+                    liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_two_wales_digital.m3u8",
             ],
     ]
 
@@ -248,6 +265,7 @@ class BBCiPlayerPuppet implements InstallablePuppet {
                     description:        "Live sports extra",
                     imageUrl:           "http://static.radio.net/images/broadcasts/0b/36/11931/c300.png",
                     backgroundImageUrl: "https://ichef.bbci.co.uk/images/ic/1200x675/p0381j5l.jpg",
+                    preferredRegion:    "uk",
                     liveStreamUrl:      "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_five_live_sports_extra.m3u8",
             ],
             [
@@ -337,11 +355,12 @@ class BBCiPlayerPuppet implements InstallablePuppet {
             it.each { source ->
                 if (source.liveStreamUrl) {
                     list << [
-                            name       : source.name,
-                            description: source.description,
-                            genres     : source.genres,
-                            logo       : source.imageUrl,
-                            url        : source.liveStreamUrl
+                            name            : source.name,
+                            description     : source.description,
+                            genres          : source.genres,
+                            logo            : source.imageUrl,
+                            preferredRegion : source.preferredRegion ? source.preferredRegion : null,
+                            url             : source.liveStreamUrl
                     ]
                 }
             }
@@ -349,10 +368,11 @@ class BBCiPlayerPuppet implements InstallablePuppet {
         (1..24).each {
             def final String imageUrl = "https://pbs.twimg.com/profile_images/581471317272211456/bmZn02Sz.png"
             list << [
-                    name       : "BBC Red Button " + it,
-                    genres     : "SPORTS",
-                    logo       : imageUrl,
-                    url        : sprintf("http://a.files.bbci.co.uk/media/live/manifesto/audio_video/webcast/hls/uk/abr_hdtv/llnw/sport_stream_%02d.m3u8", it)
+                    name            : "BBC Red Button " + it,
+                    genres          : "SPORTS",
+                    logo            : imageUrl,
+                    preferredRegion : "uk",
+                    url             : sprintf("http://a.files.bbci.co.uk/media/live/manifesto/audio_video/webcast/hls/uk/abr_hdtv/llnw/sport_stream_%02d.m3u8", it)
             ]
         }
         return list
