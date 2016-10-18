@@ -214,19 +214,19 @@ public class TubiTVPuppet implements InstallablePuppet {
                     JSONArray videos = items.getJSONArray(key)
                     for (int i = 0; i < videos.length(); i++) {
                         JSONObject video = videos.getJSONObject(i)
-                        if (video.getString("t") == "v") {
+                        if (video.getString("type") == "v") {
                             children.add(new TubiTVSourcesPuppet(this, video))
-                        } else if (video.getString("t") == "s") {
-                            children.add(new TubiTVCategoryPuppet(this, video.getString("n"), "series/" + video.getString("i")))
+                        } else if (video.getString("type") == "s") {
+                            children.add(new TubiTVCategoryPuppet(this, video.getString("title"), "series/" + video.getString("id")))
                         }
                     }
                 }
                 JSONArray seasons = json.has("series") ? json.getJSONObject("series").getJSONArray("seasons") : JSONArray()
                 for (int i = 0; i < seasons.length(); i++) {
-                    JSONArray videos = seasons.getJSONObject(i).getJSONArray("k")
+                    JSONArray videos = seasons.getJSONObject(i).getJSONArray("children")
                     for (int j = 0; j < videos.length(); j++) {
                         JSONObject video = videos.getJSONObject(j)
-                        if (video.getString("t") == "v") {
+                        if (video.getString("type") == "v") {
                             children.add(new TubiTVSourcesPuppet(this, video))
                         }
                     }
@@ -303,18 +303,35 @@ public class TubiTVPuppet implements InstallablePuppet {
         def String mName
         def String mShortDescription
         def String mImageUrl
+        def String mBackgroundImageUrl
 
         def List<SourcesPuppet.SubtitleDescription> mSubtitles = new ArrayList<SourcesPuppet.SubtitleDescription>()
 
         public TubiTVSourcesPuppet(parent, JSONObject video) {
             mParent = parent
 
-            mUrl = "http://www.tubitv.com/video/" + video.getString("i")
-            mName = video.getString("n")
-            mShortDescription = video.getString("d")
-            mImageUrl = video.getString("pp")
-            if (mImageUrl.startsWith("//")) {
+            mUrl = "http://www.tubitv.com/video/" + video.getString("id")
+            mName = video.getString("title")
+            mShortDescription = video.getString("description")
+            try {
+                mImageUrl = video.getJSONArray("thumbnails").getString(0)
+            } catch (Exception ex) {
+                try {
+                    mImageUrl = video.getJSONArray("posterarts").getString(0)
+                } catch (ignore) {}
+            }
+            if (mImageUrl != null && mImageUrl.startsWith("//")) {
                 mImageUrl = "http:" + mImageUrl
+            }
+            try {
+                mBackgroundImageUrl = video.getJSONArray("backgrounds").getString(0)
+            } catch (Exception ex) {
+                try {
+                    mBackgroundImageUrl = video.getJSONArray("posterarts").getString(0)
+                } catch (ignore) {}
+            }
+            if (mBackgroundImageUrl != null && mBackgroundImageUrl.startsWith("//")) {
+                mBackgroundImageUrl = "http:" + mBackgroundImageUrl
             }
         }
 
@@ -365,7 +382,7 @@ public class TubiTVPuppet implements InstallablePuppet {
 
         @Override
         String getBackgroundImageUrl() {
-            return mImageUrl
+            return mBackgroundImageUrl
         }
 
         @Override
@@ -414,22 +431,22 @@ public class TubiTVPuppet implements InstallablePuppet {
 
                     if (matcher.find()) {
                         JSONObject json = new JSONObject("{" + matcher.group(1) + "}").getJSONObject("video").getJSONObject("data")
-                        mSource.url = json.getString("mh")
+                        mSource.url = json.getString("url")
                         if (mSource.url.startsWith("//")) {
                             mSource.url = "http:" + mSource.url
                         }
 
-                        JSONArray captions = json.getJSONArray("sb")
+                        JSONArray captions = json.getJSONArray("subtitles")
                         for (int i = 0; i < captions.length(); i++) {
                             JSONObject sb = captions.getJSONObject(i)
 
                             SourcesPuppet.SubtitleDescription subs = new SourcesPuppet.SubtitleDescription()
 
-                            subs.url = sb.getString("u")
+                            subs.url = sb.getString("url")
                             if (subs.url.startsWith("//")) {
                                 subs.url = "http:" + subs.url
                             }
-                            subs.locale = sb.getString("l")
+                            subs.locale = sb.getString("lang")
 
                             TubiTVSourcesPuppet.this.mSubtitles.add(subs)
                         }
